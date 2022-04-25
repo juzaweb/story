@@ -3,7 +3,7 @@
 namespace Juzaweb\Story;
 
 use Juzaweb\CMS\Abstracts\Action;
-use Juzaweb\Backend\Facades\HookAction;
+use Juzaweb\CMS\Facades\HookAction;
 
 class StoryAction extends Action
 {
