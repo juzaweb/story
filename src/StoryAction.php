@@ -20,13 +20,33 @@ class StoryAction extends Action
             [
                 'label' => 'Stories',
                 'menu_icon' => 'fa fa-list',
-                'supports' => ['category', 'tag', 'comment'],
+                'supports' => ['tag', 'comment'],
                 'metas' => [
                     'chapters' => [
                         'type' => 'text',
                         'label' => 'Total Chapter'
+                    ],
+                    'source' => [
+                        'type' => 'text',
+                        'label' => 'Source'
                     ]
                 ]
+            ]
+        );
+
+        HookAction::registerTaxonomy(
+            'genres',
+            'stories',
+            [
+                'label' => 'Genres',
+            ]
+        );
+
+        HookAction::registerTaxonomy(
+            'authors',
+            'stories',
+            [
+                'label' => 'Authors',
             ]
         );
     }
@@ -39,10 +59,10 @@ class StoryAction extends Action
             [
                 'label' => 'Chapters',
                 'metas' => [
-                'content' => [
-                    'type' => 'editor',
-                        'label' => 'Content'
-                    ]
+                    'content' => [
+                        'type' => 'editor',
+                            'label' => 'Content'
+                        ]
                 ]
             ]
         );

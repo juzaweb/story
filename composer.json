@@ -3,10 +3,13 @@
     "description": "",
     "extra": {
         "juzaweb": {
-            "name": "juzaweb/story",
-            "domain": "just",
+            "name": "Stories",
+            "domain": "story",
             "cms_min": "3.0",
-            "version": "1.0"
+            "version": "1.0",
+            "providers": [
+                "Juzaweb\\Story\\Providers\\StoryServiceProvider"
+            ]
         }
     },
     "autoload": {
